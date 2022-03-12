@@ -11,24 +11,26 @@ class ClothingPiece < ApplicationRecord
 
   # Validations
 
-  validates :clothing_type, :presence => true
+  validates :clothing_type, presence: true
 
-  validates :clothing_type, :inclusion => { :in => [ "top", "bottom", "dress", "jumpsuit", "sweater", "jacket", "accessories", "other" ]  }
+  validates :clothing_type,
+            inclusion: { in: ["top", "bottom", "dress", "jumpsuit", "sweater", "jacket",
+                              "accessories", "other"] }
 
-  validates :photo, :presence => true
+  validates :photo, presence: true
 
-  validates :size, :inclusion => { :in => [ "XS", "S", "M", "L", "XL", "XXL", "3XL", "" ]  }
+  validates :size,
+            inclusion: { in: ["XS", "S", "M", "L", "XL", "XXL", "3XL", ""] }
 
-  validates :title, :uniqueness => true
+  validates :title, uniqueness: true
 
-  validates :title, :presence => true
+  validates :title, presence: true
 
-  validates :user_id, :presence => true
+  validates :user_id, presence: true
 
   # Scopes
 
   def to_s
     user.to_s
   end
-
 end
