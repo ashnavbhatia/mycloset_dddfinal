@@ -5,6 +5,8 @@ class ClothingPiece < ApplicationRecord
 
   # Validations
 
+  validates :clothing_type, :inclusion => { :in => [ "top", "bottom", "dress", "jumpsuit", "sweater", "jacket", "accessories", "other" ]  }
+
   validates :photo, :presence => true
 
   validates :size, :inclusion => { :in => [ "XS", "S", "M", "L", "XL", "XXL", "3XL", "" ]  }

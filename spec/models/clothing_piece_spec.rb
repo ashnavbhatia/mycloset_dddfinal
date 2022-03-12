@@ -12,6 +12,8 @@ RSpec.describe ClothingPiece, type: :model do
 
     describe "Validations" do
 
+    it { should validate_inclusion_of(:clothing_type).in_array([ "top", "bottom", "dress", "jumpsuit", "sweater", "jacket", "accessories", "other" ]) }
+
     it { should validate_presence_of(:photo) }
 
     it { should validate_inclusion_of(:size).in_array([ "XS", "S", "M", "L", "XL", "XXL", "3XL", "" ]) }
