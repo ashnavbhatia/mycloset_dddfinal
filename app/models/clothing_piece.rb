@@ -5,6 +5,8 @@ class ClothingPiece < ApplicationRecord
 
   # Validations
 
+  validates :title, :presence => true
+
   validates :user_id, :presence => true
 
   # Scopes
