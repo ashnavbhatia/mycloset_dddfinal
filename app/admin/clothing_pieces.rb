@@ -1,5 +1,7 @@
 ActiveAdmin.register ClothingPiece do
 
+ permit_params :user_id, :title, :description, :photo, :size, :clothing_type, :brand_name, :borrowed, :borrower_id
+
   # See permitted parameters documentation:
   # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
   #
